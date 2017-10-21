@@ -1,0 +1,2 @@
+# vimtoy
+config of vim
