@@ -3,7 +3,9 @@ function! Align_Space()     
     let replacement = substitute(current_line,'\([()a-zA-Z0-9_]\)\([!|^&=<>%*/+-]\)','\1 \2','g')    
     let newline = substitute(replacement,'\([!|^&=<>%*/+-]\)\([()a-zA-Z0-9_]\)','\1 \2','g')    
     let replacement = substitute(newline,'\([^&]\)\(\s*\)\(&\)\s*\([()a-zA-Z0-9_]\)','\1 \3\4','g')
-    let newline = substitute(replacement,'\s\+->\s\+','->','g')
+    let newline = substitute(replacement,'\s\+->','->','g')
+    let replacement = substitute(newline,'\s\+++','++','g')
+    let newline = substitute(replacement,'\s\+--','--','g')
     
     let replacement = newline
     
