@@ -10,7 +10,7 @@ function! Align_Space()     
     let replacement = newline
     
     if '"' == matchstr(replacement,'"')
-        let newline = substitute(replacement,'\s+%\s+','%','g')
+        let newline = substitute(replacement,'%\s+','%','g')
     else
         let newline = replacement
     endif
